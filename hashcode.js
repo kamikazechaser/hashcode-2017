@@ -7,13 +7,13 @@ fs.readFile('./input/' + process.argv[2], 'utf8', function (err, data) {
 });
 
 function run(input) {
-    var lines = input.split('\n').slice(0, -1) // remove the last element, which should be an empty one
+    var lines = input.split('\n').slice(0, -1) 
 
     var config = lines[0].split(' ')
-    var numberVideos = config[0] // from 0 to V - 1
-    var numberEndpoints = config[1] // from 0 to E - 1
+    var numberVideos = config[0] 
+    var numberEndpoints = config[1] 
     var numberRequestDescriptions = config[2]
-    var numberCacheServers = config[3] // from 0 to C - 1
+    var numberCacheServers = config[3] 
     var capacityCacheServer = parseInt(config[4], 10)
     lines.shift()
 
@@ -59,7 +59,7 @@ function run(input) {
             item = {
                 'videoId': item[0],
                 'endpointId': item[1],
-                'weight': item[2] // requests
+                'weight': item[2]
             }
             request.push(item)
             var vSize = videoSize[item.videoId]
